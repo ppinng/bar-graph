@@ -1,5 +1,5 @@
 import * as React from "react";
-import { cn } from "../../lib/util";
+import { cn } from "../../src/lib/util.ts";
 import { BarGraphProps, BarProps } from "./types.ts";
 const BarGraph = React.forwardRef<HTMLDivElement, BarGraphProps>(
   ({ className, children, maxValue, ...props }, ref) => {
