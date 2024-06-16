@@ -1,6 +1,6 @@
 import * as React from "react";
-import { cn } from "../../src/lib/util.ts";
-import { BarGraphProps, BarProps } from "./types.ts";
+import { cn } from "../util";
+import { BarGraphProps, BarProps } from "./types";
 const BarGraph = React.forwardRef<HTMLDivElement, BarGraphProps>(
   ({ className, children, maxValue, ...props }, ref) => {
     const bars = React.Children.toArray(children).filter(

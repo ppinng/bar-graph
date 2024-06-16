@@ -5,14 +5,16 @@ import dts from "vite-plugin-dts";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), dts({ include: ["lib"] })],
+  plugins: [react(), dts({ include: ['lib'] })],
   build: {
+    copyPublicDir: false,
     lib: {
       entry: resolve(__dirname, "lib/main.ts"),
-      formats: ["es"],
+      formats: ['es'],
+      fileName: () => `main.js`,
     },
     rollupOptions: {
-      external: ["react", "react/jsx-runtime"],
-    },
+      external: ['react', 'react/jsx-runtime', 'react-dom', 'clsx', 'class-variance-authority', 'lucide-react', 'tailwind-merge', 'tailwindcss-animate'],
+    }
   },
 });
